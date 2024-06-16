@@ -1,0 +1,7 @@
+{
+  "key": "填写你自己的腾讯地图api key",
+  "permissions": {
+    "openapi": [
+    ]
+  }
+}

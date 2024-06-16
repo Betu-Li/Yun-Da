@@ -1,0 +1,33 @@
+<view class="container">
+  <text class="order-title">历史订单</text>
+  <view wx:if="{{orderList.length > 0}}" class="container">
+    <block wx:for="{{orderList}}" wx:key="_id" wx:for-item="order" wx:for-index="index">
+      <view class="card" bind:tap="goToOrderDetail" data-index="{{index}}">
+        <view class="header">
+          <text class="title">{{order.car}}</text>
+        </view>
+        <view class="body">
+          <view class="row">
+            <text class="label">出发地:</text>
+            <text class="value">{{order.mybackfill}}</text>
+          </view>
+          <view class="row">
+            <text class="label">目的地:</text>
+            <text class="value">{{order.tobackfill}}</text>
+          </view>
+          <view class="row">
+            <text class="label">价格:</text>
+            <text class="value">{{order.price}}元</text>
+          </view>
+          <view class="row">
+            <text class="label">时间:</text>
+            <text class="value">{{order.time}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:else class="empty-message">
+    <image bind:tap="toMap"  mode="aspectFit" style="width: 640rpx; height: 1108rpx; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: -222rpx" src="/images/user/noorder.png" ></image>
+  </view>
+</view>

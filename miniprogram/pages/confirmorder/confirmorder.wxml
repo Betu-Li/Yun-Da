@@ -1,0 +1,40 @@
+<!--pages/confirmorder/confirmorder.wxml-->
+<view class="container">
+  <view class="card">
+    <view class="title">订单</view>
+    <image src="{{carImages[selectedCarTypeIndex]}}" mode="aspectFit" class="ad-image"></image>
+
+    <view class="picker-container">
+      <view class="flex-row">
+        <view class="label">起步价3公里：</view>
+        <view class="value">{{first_price[selectedCarTypeIndex]}}元</view>
+      </view>
+      <view class="flex-row">
+        <view class="label">后续公里单价：</view>
+        <view class="value">{{second_price[selectedCarTypeIndex]}}元</view>
+      </view>
+      <picker mode="selector" range="{{carTypes}}" value="{{selectedCarTypeIndex}}" bindchange="onCarTypeChange" class="picker">
+        <text class="picker-label">选择车型 (点击选择) :  </text>
+        <text class="selected-car" style="margin-left:145rpx;">{{carTypes[selectedCarTypeIndex]}}</text>
+      </picker>
+    </view>
+
+    <view class="flex-row">
+      <view class="label">出发地：</view>
+      <view class="value">{{mybackfill}}</view>
+    </view>
+    <view class="flex-row">
+      <view class="label">目的地：</view>
+      <view class="value">{{tobackfill}}</view>
+    </view>
+    <view class="flex-row">
+      <view class="label">路程：</view>
+      <view class="value">{{distance/1000}} 公里</view>
+    </view>
+    <view class="flex-row">
+      <view class="label">金额：</view>
+      <view class="value">{{price}} 元</view>
+    </view>
+    <button class="confirm-button" bind:tap="finishOrder">确认订单</button>
+  </view>
+</view>

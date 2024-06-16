@@ -1,0 +1,55 @@
+<view class="edit_userInfo_wrap">
+  <!-- 用户基本信息 -->
+  <view class="user_info_wrap">
+    <!-- id设置，只显示无法更改 -->
+    <view class="user_name_wrap">
+      <view class="userId_wrap">
+        <text>用户名</text>
+        <view class="user_name">
+          {{username}}
+        </view>
+      </view>
+      <view class="userId_wrap">
+        <text>密码</text>
+        <view class="user_password">
+          {{password}}
+        </view>
+      </view>
+    </view>
+
+    <!-- 基本信息设置 -->
+    <view class="edit_user_info_wrap">
+      <view class="user_telPhone">
+        <view style="width: 100rpx; height: 100rpx; display: block; box-sizing: border-box">手机  : </view>
+        <view> <input style="width: 472rpx; height: 92rpx; display: block; box-sizing: border-box" type="number"  placeholder="{{phone}}" bindinput="setPhone" bindblur="checkPhone"/></view>
+      </view>
+      <view class="user_birthday">
+        <picker mode="date" value="{{birth}}" start="1950-01-01" end="2025-12-31" bindchange="setBirth">
+          <view>
+            生日：{{birth}}
+          </view>
+        </picker>
+      </view>
+      <view class="user_sex">
+        <picker mode="selector" range="{{sexArray}}" value="{{sex}}" bindchange="setSex">
+          <view>
+            性别：{{sex}}
+          </view>
+        </picker>
+      </view>
+      <view class="user_address">
+        <picker mode="region"  value="{{region}}" bindchange="setAddress">
+          <view>
+            住址：{{address}}
+          </view>
+        </picker>
+      </view>
+     
+    </view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <view class="save_button" bind:tap="saveInfo">
+    <button>保存编辑</button>
+  </view>
+</view>

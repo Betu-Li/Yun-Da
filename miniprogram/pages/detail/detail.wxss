@@ -1,0 +1,23 @@
+/* pages/detail/detail.wxss */
+.order-detail {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #f5f5f5;
+  
+}
+
+/* 订单信息标题 */
+.order-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 订单信息内容 */
+.order-content {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}

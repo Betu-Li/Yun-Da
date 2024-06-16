@@ -1,0 +1,96 @@
+/* pages/userInfo/userInfo.wxss */
+page {
+  background-color: #f5f5ed;
+}
+
+.edit_userInfo_wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.user_avatar_wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+.user_avatar_wrap image {
+  border: 2rpx solid white;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+}
+
+.user_info_wrap {
+  flex: 6;
+  line-height: 100rpx;
+  margin: 20rpx 50rpx 50rpx 50rpx;
+  font-size: 26rpx;
+}
+
+.user_name_wrap {
+  background-color: #fff;
+  border-radius: 25rpx;
+}
+
+
+.edit_user_info_wrap {
+  background-color: #fff;
+  border-radius: 25rpx;
+}
+
+.user_birthday,
+.user_sex,
+.user_address,
+.user_telPhone {
+  margin: 30rpx;
+  border-bottom: 1rpx solid #f5f5ed;
+}
+
+.user_telPhone{
+  display: flex;
+  flex-direction: row;
+}
+
+.user_birthday,
+.user_sex,
+.user_address,
+.user_telPhone text {
+  color: #615839;
+  font-size: 30rpx;
+}
+
+.phone_wrap {
+  background-color: #fff;
+  border-radius: 25rpx;
+}
+
+.userId_wrap {
+  display: flex;
+  margin: 30rpx;
+  border-bottom: 1rpx solid #f5f5ed;
+}
+
+.userId_wrap text {
+  flex: 1;
+  color: #615839;
+  font-size: 30rpx;
+}
+
+.save_button {
+  flex: 1;
+  border-radius: 40rpx 40rpx 0 0;
+  background-color: #fff;
+}
+
+.save_button button {
+  margin-top: 15rpx;
+  width: 80%;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  background-color: skyblue;
+}

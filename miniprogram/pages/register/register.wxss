@@ -1,0 +1,104 @@
+/* pages/register/register.wxss */
+/* pages/login/login.wxss *//* 最大的父元素 */
+.v1{
+  display: block;
+  position:absolute;
+  width: 100%;
+  background-color: white;
+}
+/* 白色区域 */
+.v1 .v2{
+  position: relative;
+  margin-top: 150rpx;
+  left: 50rpx; 
+  width: 545rpx;
+  height: 600rpx;
+  background-color: white;
+  border-radius: 50rpx;
+}
+/* 白色区域内的登录文本 */
+.v1 .v2 .toptext{
+  margin-top: 50rpx;
+  position: absolute;
+  margin-left:50rpx;
+  width: 150rpx;
+  height: 100rpx;
+  font-size: 60rpx;
+  font-family: Helvetica;
+  color: #000000;
+  line-height: 100rpx;
+  letter-spacing: 2rpx;
+}
+/* 账号图片+输入框+下划线的父容器view */
+.v1 .v2 .user{
+  margin-top: 200rpx;
+  margin-left: 25rpx;
+  position: absolute;
+  display: flex;
+  width:600rpx ;
+  height: 90rpx ;
+  background-color: rgb(250, 248, 248);
+  border-radius: 50rpx;
+}
+/* 账号图标 */
+.v1 .v2 .user .user_name{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+/* 账号输入框 */
+.v1 .v2 .user input{
+  width: 400rpx;
+  font-size: 30rpx ;
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+}
+/* 密码图标+输入框+图标+下划线父容器view */
+.v1 .v2 .password{
+  margin-top: 350rpx;
+  margin-left: 25rpx;
+  position: absolute;
+  display: flex;
+  width:600rpx ;
+  height: 90rpx ;
+  background-color: rgb(250, 248, 248);
+  border-radius: 50rpx;
+
+}
+/* 密码图标 */
+.v1 .v2 .password .ps{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  width: 55rpx;
+  height: 50rpx;
+}
+/* 密码输入框 */
+.v1 .v2 .password input{
+  width: 400rpx;
+  font-size: 30rpx ;
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+}
+/* 注册按钮容器view */
+.v1 .v2 .reg{
+  width: 600rpx;
+  height: 80rpx;
+  position: absolute;
+  margin-top:515rpx;
+  margin-left:25rpx;
+}
+/* 登录按钮 */
+.v1 .v2 .reg button{
+  padding: 0rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  width: 100%;
+  height: 100%;
+  border-radius: 50rpx;
+}
+
+.btn-reg{
+  color: #000000;
+  background-color: yellowgreen;
+}

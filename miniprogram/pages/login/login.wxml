@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class="v1" style="height: 1410rpx; width: 750rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+   <view class="v2">
+    <view class="toptext" style="width: 125rpx; height: 79rpx; display: block; box-sizing: border-box; left: 213rpx; top: -95rpx; position: absolute">登录</view>
+     <view class="user">
+       <image src="/images/user/mine.png" class="user_name"></image>
+       <input placeholder="请输入用户名" type="number" bindblur="setUsername" />
+     </view>
+
+     <view class="password">
+       <image src="/images/user/lock.png" class="ps"></image>
+       <input placeholder="请输入密码" type="password" bindblur="setPassword" />
+     </view>
+     
+     <view class="login">
+       <button class="btn-dl" bindtap="selectUser">登录</button>
+       <view class="register" bindtap="toRegister" style="width: 74rpx; height: 41rpx; display: block; box-sizing: border-box; position: relative; left: 264rpx; top: 12rpx">
+         注册
+     </view>
+     </view>
+   </view>
+ </view>
+  
+
+  

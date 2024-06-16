@@ -1,0 +1,5 @@
+<view>
+  <map id="map" style="width: 100%; height: 1200rpx; display: block; box-sizing: border-box; left: 4rpx; top: -32rpx; position: relative"data-index="{{index}}" show-location markers="{{markers}}" latitude="{{latitude}}" longitude="{{longitude}}" polyline="{{polyline}}"  show-location ></map>
+  <navigator style="text-align: center; font-size: large;" url="/pages/confirmorder/confirmorder">确定路线
+  </navigator>
+</view>

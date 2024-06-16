@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<div class="order-detail">
+  <view class="order-title">订单详情</view>
+  <view class="order-content">订单id: {{order._id}}</view>
+  <view class="order-content">车辆：{{order.car}}</view>
+  <view class="order-content">距离：{{order.distance}} 公里</view>
+  <view class="order-content">起点：{{order.mybackfill}}</view>
+  <view class="order-content">终点：{{order.tobackfill}}</view>
+  <view class="order-content">时间：{{order.time}}</view>
+  <view class="order-content">价格：{{order.price}} 元</view>
+  <view class="order-content"></view>
+  <map id="map" style="width: 100%; height: 750rpx; display: block; box-sizing: border-box; left: 4rpx;  position: relative"data-index="{{index}}" show-location markers="{{markers}}" latitude="{{latitude}}" longitude="{{longitude}}" polyline="{{polyline}}"  show-location ></map>
+</div>

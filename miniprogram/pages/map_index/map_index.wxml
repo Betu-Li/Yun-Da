@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <image class="avatar" src="/images/user/avatar.png" bind:tap="toUser"></image>
+  </view>
+  <view class="carousel">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{500}}" style="width: 750rpx; height: 392rpx; display: block; box-sizing: border-box">
+      <swiper-item>
+        <image class="carousel-image" src="/images/map/image1.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class="carousel-image" src="/images/map/image2.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class="carousel-image" src="/images/map/image3.jpeg"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="current-location">
+    <view class="divLine" style="position: relative; left: -4rpx; top: -24rpx"></view>
+    <view class="myAddress" style="width: 742rpx; height: 64rpx; display: flex; box-sizing: border-box" bind:tap="toMyaddress">
+      出发位置：{{mybackfill}}
+      <image class="enter" src="/images/user/enter.png" style="width: 60rpx; height: 60rpx; display: block; box-sizing: border-box"></image>
+    </view>
+    <view class="divLine" style="position: relative; left: -4rpx; top: 40rpx"></view>
+    <view class="toAddress" style="width: 742rpx; height: 64rpx; display: flex; box-sizing: border-box; position: relative; left: 4rpx; top: 64rpx" bind:tap="toToaddress">
+      收货位置：{{tobackfill}}
+      <image class="enter" src="/images/user/enter.png" style="width: 60rpx; height: 60rpx; display: block; box-sizing: border-box"></image>
+    </view>
+    <view class="divLine" style="position: relative; left: 4rpx; top: 96rpx"></view>
+  </view>
+  <view class="buttons">
+    <button class="now" bindtap="toOrder" style="position: relative; left: 0rpx; top: 274rpx; width: 368rpx; height: 96rpx; display: block; box-sizing: border-box">现在用车</button>
+  </view>
+</view>

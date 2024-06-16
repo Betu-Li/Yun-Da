@@ -1,0 +1,20 @@
+<!--pages/register/register.wxml-->
+<view class="v1" style="height: 1416rpx; width: 750rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+   <view class="v2">
+     <view class="toptext" style="width: 125rpx; height: 79rpx; display: block; box-sizing: border-box; left: 213rpx; top: -95rpx; position: absolute">注册</view>
+     <view class="user" style="position: absolute; left: 0rpx; top: 10rpx">
+       <image src="/images/user/mine.png" class="user_name"></image>
+       <input bindblur="setUsername" placeholder="请输入用户名" type="number" />
+     </view>
+     <view class="password">
+       <image src="/images/user/lock.png" class="ps"></image>
+       <input bindblur="setPassword" placeholder="请输入密码" type="password" />
+     </view>
+     <view class="reg">
+       <button class="btn-reg"  bind:tap="createUser">注册</button>
+     </view>
+   </view>
+ </view>
+  
+
+
