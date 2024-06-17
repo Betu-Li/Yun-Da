@@ -5,9 +5,9 @@
 
 # 数据库
 用户记录 `user`：
-![](assets/17185236810604.jpg)
+![user](assets/17185236810604.jpg)
 订单记录 `order`：
-![](assets/17185237533812.jpg)
+![order](assets/17185237533812.jpg)
 
 # 项目配置
 Clone using the web URL ：`https://github.com/Betu-Li/Yun-Da.git`
@@ -19,4 +19,4 @@ Clone using the web URL ：`https://github.com/Betu-Li/Yun-Da.git`
 修改腾讯地图key：
 `miniprogram/pages/myAddress/myAddress.js` 
 `miniprogram/pages/toAddress/toAddress.js`
-![](assets/17185245367258.jpg)
+![key](assets/17185245367258.jpg)
