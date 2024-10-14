@@ -1,7 +1,7 @@
 <!--pages/myAddress/myAddress.wxml-->
 <view class="container">
-  <view class="map-container">
-    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" bindregi="regi" style="width: 100%; height: 50vh;" bindupdated="addMarker"></map>
+  <view class="map-container" style="width: 100%; height: 50vh;" >
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" bindregi="regi" bindupdated="addMarker"></map>
   </view>
   <view class="input-container"> <input class="input" placeholder="请输入出发点" bindinput="getsuggest" value="{{backfill}}" /></view>
           <view class="arrows" style="position: relative; left: 0rpx; top: -127rpx">
