@@ -4,7 +4,7 @@
     <view class="toptext" style="width: 125rpx; height: 79rpx; display: block; box-sizing: border-box; left: 213rpx; top: -95rpx; position: absolute">登录</view>
      <view class="user">
        <image src="/images/user/mine.png" class="user_name"></image>
-       <input placeholder="请输入用户名" type="number" bindblur="setUsername" />
+       <input placeholder="请输入用户名" type="text" bindblur="setUsername" />
      </view>
 
      <view class="password">
