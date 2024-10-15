@@ -41,7 +41,7 @@ var Conf = new(Config)
 
 // Init 初始化配置文件
 func Init() (err error) {
-	viper.SetConfigFile("./conf/config.yaml") // 指定配置文件路径
+	viper.SetConfigFile("pkg/conf/config.yaml")
 
 	err = viper.ReadInConfig() // 查找并读取配置文件
 	if err != nil {

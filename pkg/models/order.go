@@ -1,8 +1,8 @@
 package models
 
 import (
-	"Yun-Da/pkg/dao/mysql"
 	"fmt"
+	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"
 )
 
@@ -20,9 +20,9 @@ type Order struct {
 }
 
 // CreateOrder 新增订单
-func CreateOrder(order *Order) (err error) {
+func CreateOrder(db *sqlx.DB, order *Order) (err error) {
 	sqlStr := "insert into order(username, carType, distance, price, from, to, time, mybackfill, tobackfill) values (?,?,?,?,?,?,?,?,?)"
-	_, err = mysql.Db.Exec(sqlStr, order.Username, order.Car, order.Distance, order.Price, order.From, order.To, order.Time, order.Mybackfill, order.Tobackfill)
+	_, err = db.Exec(sqlStr, order.Username, order.Car, order.Distance, order.Price, order.From, order.To, order.Time, order.Mybackfill, order.Tobackfill)
 	if err != nil {
 		zap.L().Info("insert failed", zap.Error(err))
 		fmt.Printf("insert failed, err:%v\n", err)
@@ -32,10 +32,10 @@ func CreateOrder(order *Order) (err error) {
 }
 
 // GetOrderListByUsername 根据用户名获取订单列表
-func GetOrderListByUsername(username string) ([]Order, error) {
+func GetOrderListByUsername(db *sqlx.DB, username string) ([]Order, error) {
 	var orderList []Order
 	sqlStr := "select id, username, carType, distance, price, from, to, time, mybackfill, tobackfill from order where username=?"
-	err := mysql.Db.Select(&orderList, sqlStr, username)
+	err := db.Select(&orderList, sqlStr, username)
 	if err != nil {
 		zap.L().Info("get order list failed", zap.Error(err))
 		fmt.Printf("get order list failed, err:%v\n", err)
