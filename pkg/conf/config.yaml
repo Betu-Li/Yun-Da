@@ -1,0 +1,20 @@
+app:
+  name: "yun_da"
+  model: "dev"
+  port : 8081
+
+log:
+  level: "debug"
+  filename: "yun_da.log"
+  max_size: 200
+  max_age: 30
+  max_backup: 7
+
+mysql:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: "mysql123"
+  dbname: "yun_da"
+  max_open_conns: 200
+  max_idle_conns: 50
