@@ -9,7 +9,7 @@ import (
 	"go.uber.org/zap"
 )
 
-var db *sqlx.DB
+var Db *sqlx.DB
 
 func Init(cfg *settings.MySQLConfig) (err error) {
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
@@ -18,16 +18,16 @@ func Init(cfg *settings.MySQLConfig) (err error) {
 		cfg.Host,
 		cfg.Port,
 		cfg.DBName)
-	db, err = sqlx.Connect("mysql", dsn)
+	Db, err = sqlx.Connect("mysql", dsn)
 	if err != nil {
 		logger.Lg.Error("connect DB failed", zap.Error(err))
 		return
 	}
-	db.SetMaxOpenConns(cfg.MaxOpenConns)
-	db.SetMaxIdleConns(cfg.MaxIdleConns)
+	Db.SetMaxOpenConns(cfg.MaxOpenConns)
+	Db.SetMaxIdleConns(cfg.MaxIdleConns)
 	return
 }
 
 func Close() {
-	_ = db.Close()
+	_ = Db.Close()
 }
